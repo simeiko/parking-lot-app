@@ -1,0 +1,158 @@
+html, body
+{
+    margin: 0;
+    font: 105%/1.4 Lato, Arial, sans-serif;
+    height: 100%;
+    background: #3498db;
+    color: #fff;
+}
+
+#root
+{
+    display: flex;
+    height: 100%;
+    flex-grow: 1;
+}
+
+/***** FLEX CONTAINER *****/
+
+#container
+{
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/***** HEADER *****/
+
+header
+{
+    text-align: center;
+    user-select: none;
+}
+
+/** Icon **/
+
+header .material-icons
+{
+    font-size: 500%;
+    margin: 25px 0;
+}
+
+.material-icons.loading
+{
+    -webkit-animation-name: spin;
+    -moz-animation-name: spin;
+    -o-animation-name: spin;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin
+{
+    from { transform: rotate(0deg);   }
+    to   { transform: rotate(360deg); }
+}
+
+/***** MAIN *****/
+
+main,
+main > div
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+main h3
+{
+    text-align: center;
+}
+
+/*** Drive In/Out form ***/
+
+main form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+main form label
+{
+    margin: 2px 0;
+}
+
+main form input
+{
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+/** Drive In/Out buttons **/
+
+#drive-btn
+{
+    margin: 10px;
+    border: none;
+    background-color: #0665A2;
+    color: #fff;
+    font-size: 150%;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+
+#drive-btn:hover
+{
+    background-color: #85C4ED;
+    color: #0665A2;
+}
+
+/***** FOOTER *****/
+
+footer
+{
+    display: flex;
+}
+
+footer button
+{
+    flex-grow: 1;
+    border: none;
+    color: #fff;
+    font-size: 102.5%;
+    padding: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+    background: linear-gradient(#3498db, #2980b9);
+}
+
+footer button:hover
+{
+    color: #bdc3c7;
+}
+
+/* Query for tablets */
+
+@media screen and (min-width: 768px)
+{
+    body, html
+    {
+        font-size: 125%;
+    }
+
+    #root
+    {
+        margin: 0 auto;
+        width: 768px;
+    }
+}
